@@ -1,65 +1,80 @@
-# Simple Todo List Application
+# To-Do List App
 
-This is a simple task management application created using Tkinter for the GUI and SQLite for the database. The application allows users to register, log in, add tasks, and manage tasks with a calendar interface.
+## Created by: Keitumetse Mabalane
+
+This is a simple To-Do List application built using Python and Tkinter for the GUI, SQLite for the database, and Pickle for data serialization. The application allows you to add tasks with descriptions, due dates, and due times, delete tasks, and store all data persistently in a database.
+
+---
 
 ## Features
-- User registration and login
-- Add, delete, and view tasks
-- Select task date using a calendar
-- Secure password storage with SHA-256 hashing
+- Add new tasks with descriptions, due dates, and due times.
+- Delete tasks from the list.
+- Persist tasks using SQLite database.
+- Error handling for missing task information.
 
-## Requirements
-- Python 3.x
-- tkcalendar
-- python-dotenv
+---
 
 ## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/OfentseMabalane1/simple_todo_list.git
-   cd simple_todo_list
 
-    Create and activate a virtual environment (optional but recommended):
+To run the To-Do List app on your local machine, follow the steps below.
 
-    sh
+### 1. Clone the Repository
 
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```bash
+git clone https://github.com/OfentseMabalane1/todolist.git
+cd todolist
 
-Install the required packages:
+2. Create a Virtual Environment (optional but recommended)
 
-sh
+It's a good practice to use a virtual environment for Python projects.
 
-    pip install -r requirements.txt
+python3 -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+
+3. Install the Required Dependencies
+
+Make sure you have a requirements.txt with the necessary packages. To install dependencies:
+
+pip install -r requirements.txt
+
+If you don't have requirements.txt, you can manually install the dependencies with:
+
+pip install tk sqlite3 pickle5
+
+4. Run the Application
+
+Once everything is set up, you can run the application using:
+
+python todo.py
 
 Usage
 
-    Run the application:
+When the application starts, you will see the following elements:
 
-    sh
+    Task Description: A field to input the description of your task.
+    Due Date: A field to input the due date of the task (in YYYY-MM-DD format).
+    Due Time: A field to input the due time of the task (in HH:MM format).
+    Task List: A list that shows all the tasks with their due dates and times.
+    Delete Task: Select a task from the list and click to delete it.
+Screenshots
 
-    python config.py
+Here’s a screenshot of what the To-Do List application looks like:
 
-    Use the GUI to register a new user or log in with an existing account.
+    Landing Screen
+    images/landing.png
 
-    Add tasks by entering the task details and selecting a date from the calendar.
+    Tasks Added Screen
+    images/tasks_added.png
 
-Project Structure
+    Deleted Entry Screen
+    images/deleted_entry.png
 
-    config.py: Main application file containing the GUI and database logic.
-    README.md: Project documentation.
-    requirements.txt: List of required packages.
-    tasks.db: SQLite database file (generated automatically).
+License
 
-Author
+This project is open-source and available under the MIT License. See the LICENSE file for more details.
+Acknowledgements
 
-Created by Keitumetse Mabalane, a student at WeThinkCode.
-Email: kmabalane023@student.wethinkcode.co.za
-
-perl
+    This app was created by Keitumetse Mabalane as part of learning and building a To-Do List application with Python.
+    Thanks to Tkinter for the GUI and SQLite for the database.
 
 
-### requirements.txt
-```txt
-tkcalendar
-python-dotenv
